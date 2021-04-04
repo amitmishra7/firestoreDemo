@@ -92,6 +92,7 @@ That's it folks! Now we are all set with the project setup. Let's move ahead on 
 ## Step 2 :  Install Packages
 
 Place the below dependencies in your `pubspec.yaml` file and run `flutter pub get`
+
 ```
   
   cloud_firestore: ^0.11.0+2
@@ -99,8 +100,6 @@ Place the below dependencies in your `pubspec.yaml` file and run `flutter pub ge
 ```
 
 ## Step 3 : Create Firestore Instance
-
-Create the 1st model class file as `items.dart`
 
 ```
 
