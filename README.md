@@ -46,7 +46,7 @@ Once done. Go ahead and download the `google-services.json` file and place it in
 
 Then add the below line of code to your `app/build.gradle` file.
 
-```
+```dart
 
 apply plugin: 'com.google.gms.google-services'
 
@@ -54,7 +54,7 @@ apply plugin: 'com.google.gms.google-services'
 
 Next step is to add the below line of code to your `project/build.gradle` file.
 
-```
+```dart
 
 classpath 'com.google.gms:google-services:4.2.0'
 
@@ -93,7 +93,7 @@ That's it folks! Now we are all set with the project setup. Let's move ahead on 
 
 Place the below dependencies in your `pubspec.yaml` file and run `flutter pub get`
 
-```
+```dart
   
   cloud_firestore: ^0.11.0+2
   
@@ -111,7 +111,7 @@ Firestore fireStoreDataBase = Firestore.instance;
 
 In Firestore database the data is saved in the `document` similar to rows in sequential database. These documents are saved in `collections` which are similar to tables in sequential database.
 
-```
+```dart
 
 StreamBuilder<QuerySnapshot>(
         stream: fireStoreDataBase.collection("contacts").snapshots(),
@@ -133,7 +133,7 @@ StreamBuilder<QuerySnapshot>(
 
 `createContact()` is used to create new contact as shown below.
 
-```
+```dart
  void createContact(
       String firstName, String lastName, String mobileNo, String email) async {
     await fireStoreDataBase
@@ -155,7 +155,7 @@ Calling the above method will create a new document in our collection.
 
 `updateContact()` is used update an existing document on the basis of `documentId`.
 
-```
+```dart
 void updateContact(String documentId, String firstName, String lastName,
       String mobileNo, String email) {
     try {
@@ -179,7 +179,7 @@ Calling the above method will update the document corresponding to the reference
 
 `deleteContact()` is used delete an existing document on the basis of `documentId`.
 
-```
+```dart
  void deleteContact(String documentId) {
     try {
       fireStoreDataBase.collection('contacts').document(documentId).delete();
